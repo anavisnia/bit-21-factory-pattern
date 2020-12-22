@@ -28,6 +28,10 @@ const calc = text => {
     });
     
     const action = actions[parts[1]]
+
+    if (!action) {
+        return 'ERROR: no valid action';
+    }
     return action(parts[0], parts[2]); // parts[1] = +
 };
 
